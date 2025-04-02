@@ -28,7 +28,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image,caption="Uploaded Image.", use_column_width=True)
     
-submit = st.button("Tell me about this image")
+submit = st.button("Submit")
 if submit:
     response = get_gemini_response(input,image)
     st.subheader("Response from the Bot: ")
